@@ -1,0 +1,17 @@
+{
+	"full_name" : "Ray Vilalobos",
+	"title" : "Staff Author",
+	"links" : 
+		{ "blog" 	 : "http://blog.com" ,
+		  "facebook" : "http://facebook.com" ,
+		  "youtube"  : "http://youtube.com" ,
+		  "podcast"  : "http://podcast.com" ,
+		  "twitter"  : "http://twitter.com" },
+	"array" : [
+		{ "blog"     : "http://iviewsource.com" },
+		{ "facebook" : "http://facebook.com/iviewsource" },
+		{ "podcast"  : "http://feeds.feedburner.com/authoredcontent" },
+		{ "twitter"  : "http://twitter.com/planetoftheweb" },
+		{ "youtube"  : "http://www.youtube.com/planetoftheweb" }
+	]
+}

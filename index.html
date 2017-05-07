@@ -1,0 +1,109 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>JavaScript: JSON</title>
+
+</head>
+
+<body>
+
+<!-- JQuery -->
+<h2>JQUERY</h2>
+<ol id="jquery"></ol>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="jquery.js"></script>
+
+
+<!-- ////////////////  JSONP ///////////// -->
+<h2>JSONP</h2>
+<ol id="jsonp"></ol>
+
+<script src="jsonp.js"></script>
+<script src="http://iviewsource.com/exercises/json/data.json"></script>
+
+
+<!-- ////////////////  AJAX ///////////// -->
+
+<h2>OL AJAX Links</h2>
+<ol id="ajax_array"></ol>
+
+<h2>UL Ajax Links</h2>
+<ul id="ajax_objects"></ul>
+
+
+
+
+<!-- ////////////////  INLINE ///////////// -->
+
+<h2>OL Links</h2>
+<ol id="links"></ol>
+
+<h2>UL Link</h2>
+<ul id="link"></ul>
+
+<script src="ul_script.js"></script>
+<script src="ol_script.js"></script>
+
+<script>
+
+var infos = {
+	"full_name" : "Ray Vilalobos",
+	"title" : "Staff Author",
+	"links" : [
+		{ "blog" 	 : "http://blog.com" },
+		{ "facebook" : "http://facebook.com" },
+		{ "youtube"  : "http://youtube.com" },
+		{ "podcast"  : "http://podcast.com" },
+		{ "twitter"  : "http://twitter.com" }
+	]
+};
+
+var outputs = '';
+
+for (var i = 0; i <= infos.links.length; i++) {
+	for (key in infos.links[i]) {
+		if (infos.links[i].hasOwnProperty(key)) {
+			outputs += '<li>' +
+			'<a href = "' + infos.links[i][key] +
+			'">' + key + '</a>' +
+			'</li>';
+			console.log(outputs);
+		} // hasOwnProperty check
+	} // for each object 
+} // for each array element
+
+var updates = document.getElementById('links');
+updates.innerHTML = outputs;  
+
+/////////////////////////////////
+
+var info = {
+	"full_name" : "Ray Vilalobos",
+	"title" : "Staff Author",
+	"links" : {
+		"blog" : "http://blog.com",
+		"facebook" : "http://facebook.com",
+		"youtube" : "http://youtube.com",
+		"podcast" : "http://podcast.com",
+		"twitter" : "http://twitter.com"
+	}
+};
+
+var output = "";
+for(key in info.links) {
+	if(info.links.hasOwnProperty(key)){
+		output += '<li>' +
+		'<a href = "' + info.links[key] + 
+		'">' + key + '</a>' + 
+		'</li>';
+	} // if links has the key property
+} // for... go through each link
+
+var update = document.getElementById('link');
+update.innerHTML = output;
+
+</script>
+
+</body>
+</html>
